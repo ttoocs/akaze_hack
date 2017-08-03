@@ -216,6 +216,7 @@ void compute_inliers_ransac(const std::vector<cv::Point2f>& matches,
     R[i].at<double>(2,0), R[i].at<double>(2,1), R[i].at<double>(2,2), T[i].at<double>(2),
     0 , 0,  0,  1 );
     
+    cv::transpose(ffs,ffs);
 //  std::cout << "Mat: FFS\n" << ffs << std::endl;
   
 //    std::cout << "Mat H:\n" <<  ffs << std::endl;
