@@ -166,12 +166,14 @@ int main(int argc, char *argv[]) {
     cout << "Number of Outliers: " << noutliers << endl;
     cout << "Inliers Ratio: " << ratio << endl << endl;
 
+/*
     draw_keypoints(img1_rgb, kpts1);
     draw_keypoints(img2_rgb, kpts2);
     draw_inliers(img1_rgb, img2_rgb, img_com, inliers);
     cv::namedWindow("Inliers", cv::WINDOW_NORMAL);
     cv::imshow("Inliers",img_com);
     cv::waitKey(0);
+*/
   }
 }
 
