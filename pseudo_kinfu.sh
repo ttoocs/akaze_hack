@@ -1,5 +1,6 @@
 rm 100-0.log
-NUMPCD=`cat cv.traj  | tail -n 5 | head -n 1 | cut -d' ' -f 3`
+NUMTRAJ=`cat cv.traj  | tail -n 5 | head -n 1 | cut -d' ' -f 3`
+NUMPCD=$((NUMTRAJ/50))
 for i in `seq 0 1 $NUMPCD`; do
 S=$((i*50))
 E=$((S+50))
