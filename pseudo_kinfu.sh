@@ -1,9 +1,16 @@
+#!/bin/bash
+
+SAMPLES=50
+if [ $1 == "" ] ; then
+  SAMPELS=$1
+fi
+
 rm 100-0.log
 NUMTRAJ=`cat cv.traj  | tail -n 5 | head -n 1 | cut -d' ' -f 3`
-NUMPCD=$((NUMTRAJ/50))
+NUMPCD=$((NUMTRAJ / SAMPLES))
 for i in `seq 0 1 $NUMPCD`; do
-S=$((i*50))
-E=$((S+50))
+S=$((i * SAMPLES))
+E=$((S + SAMPLES))
 echo Start: $S
 echo End: $E
 local2Global cv.traj fun$i.traj $S $E;
