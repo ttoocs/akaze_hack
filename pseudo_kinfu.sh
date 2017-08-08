@@ -25,7 +25,7 @@ mkdir int$i;
     ln -s ../../../depthframes/Image$j.png ./depthframes/Image$((j-S)).png
   done;
   cd ..
-Integrate --ref_traj fun$i.traj --resolution 12 --oni_file ./int$i/ --save_to cloud_bin_$i.pcd --camera ../cam.param ;
+Integrate --ref_traj fun$i.traj --resolution 12 --oni_file ./int$i/ --save_to cloud_bin_$i.pcd --camera ../cam.param --reduce 4;
 done 
 wait
 
