@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SAMPLES=50
-if [ $1 == "" ] ; then
+if [ "$1" == "" ] ; then
   SAMPELS=$1
 fi
 
